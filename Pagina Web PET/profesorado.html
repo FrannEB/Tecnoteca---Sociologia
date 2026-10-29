@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Profesorado — Biblioteca Virtual Docente</title>
+  <meta name="description" content="Plan de estudios del Profesorado de Educación Tecnológica (Instituto Superior Roque González): cada materia conectada con los contenidos curriculares que vas a enseñar.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="profesorado">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Profesorado</span></nav>
+        <h1 class="reveal">Los 4 años del Profesorado, conectados con el aula</h1>
+        <p class="lead reveal">Recorré el plan de estudios del Profesorado de Educación Tecnológica del Instituto Superior Roque González. En cada materia te contamos <strong>cómo te ayuda a enseñar los contenidos curriculares</strong> y a qué parte de la biblioteca ir.</p>
+        <div class="chip-row reveal" style="margin-top:18px">
+          <span class="chip" style="cursor:default"><span class="dot" style="color:var(--sky)"></span>Formación General</span>
+          <span class="chip" style="cursor:default"><span class="dot" style="color:var(--gold)"></span>Formación Específica</span>
+          <span class="chip" style="cursor:default"><span class="dot" style="color:var(--brand)"></span>Práctica Profesionalizante</span>
+          <span class="chip" style="cursor:default"><span class="dot" style="color:var(--slate)"></span>Definición Institucional</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:10px">
+      <div class="container">
+        <div class="year-rail reveal" id="year-rail" role="tablist" aria-label="Año de la carrera"></div>
+        <div id="year-view"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="materia-modal" hidden role="dialog" aria-modal="true" aria-label="Detalle de la materia">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" style="width:min(720px,100%)">
+      <button class="icon-btn modal-close" type="button" data-close-modal aria-label="Cerrar"><span data-icon="close"></span></button>
+      <div class="modal-content" id="materia-content"></div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca Virtual para Futuros Docentes</title>
+  <meta name="description" content="Biblioteca virtual solidaria y gratuita para estudiantes del Profesorado de Educación Tecnológica del Instituto Superior Roque González (Posadas): contenidos curriculares, secuencias, recursos y bibliografía.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal">Proyecto solidario socioeducativo · Acceso libre y gratuito</span>
+          <h1 class="reveal" style="--d:.08s">Bienvenidos a nuestra <span class="hl">Biblioteca Virtual</span> para futuros docentes</h1>
+          <p class="lead reveal" style="--d:.16s">Un espacio solidario y socioeducativo para compartir saberes y recursos para nuestra formación. Hecho por estudiantes del Profesorado de Educación Tecnológica del Instituto Superior Roque González, para los cuatro años de la carrera.</p>
+          <div class="hero-cta reveal" style="--d:.24s">
+            <a class="btn btn-primary" href="biblioteca.html">Entrar a la biblioteca <span data-icon="arrow"></span></a>
+            <a class="btn btn-ghost" href="niveles.html">Contenidos por nivel</a>
+          </div>
+          <div class="hero-meta reveal" style="--d:.32s">
+            <div class="stat"><span class="stat-num" id="stat-grados" data-count="0">0</span><span class="stat-label">salas, grados y años</span></div>
+            <div class="stat"><span class="stat-num" id="stat-contenidos" data-count="0">0</span><span class="stat-label">contenidos curriculares</span></div>
+            <div class="stat"><span class="stat-num" id="stat-conceptos" data-count="0">0</span><span class="stat-label">conceptos clave</span></div>
+            <div class="stat"><span class="stat-num" id="stat-recursos" data-count="0">0</span><span class="stat-label">recursos verificados</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.2s" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="190" fill="var(--bg-2)"/>
+            <!-- estante con los 4 libros: celeste, azul oscuro, dorado y amarillo -->
+            <rect x="96" y="150" width="44" height="138" rx="6" fill="var(--sky)"/>
+            <rect x="146" y="118" width="50" height="170" rx="6" fill="var(--brand)"/>
+            <rect x="202" y="160" width="42" height="128" rx="6" fill="var(--gold)"/>
+            <g transform="rotate(12 252 288)"><rect x="252" y="142" width="44" height="146" rx="6" fill="var(--sun)"/></g>
+            <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55">
+              <path d="M106 170h24M106 268h24M157 140h28M157 268h28M212 180h22M212 268h22"/>
+            </g>
+            <g font-family="Manrope, Inter, sans-serif" font-weight="800" font-size="20" text-anchor="middle">
+              <text x="118" y="225" fill="#fff">1</text>
+              <text x="171" y="209" fill="#fff">2</text>
+              <text x="223" y="230" fill="#fff">3</text>
+              <text x="282" y="222" fill="#14306a" transform="rotate(12 252 288)">4</text>
+            </g>
+            <rect x="70" y="288" width="262" height="8" rx="4" fill="var(--line-2)"/>
+            <!-- engranaje -->
+            <g class="gear gear-cw">
+              <circle cx="300" cy="96" r="26" fill="none" stroke="var(--brand)" stroke-width="13" stroke-dasharray="10 10.42"/>
+              <circle cx="300" cy="96" r="20" fill="var(--brand)"/>
+              <circle cx="300" cy="96" r="7" fill="var(--bg-2)"/>
+            </g>
+            <circle cx="100" cy="98" r="11" fill="var(--sun)"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOS 4 ESTANTES ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Los 4 estantes de la biblioteca</span>
+            <h2 class="reveal">Saberes y recursos para toda la formación docente</h2>
+          </div>
+          <p class="reveal">Organizamos el material en cuatro áreas que atraviesan la carrera. Elegí un estante para ver temas, autores, materias relacionadas, documentos y videos.</p>
+        </div>
+        <div class="grid grid-2" id="home-areas"></div>
+      </div>
+    </section>
+
+    <!-- ============ HERRAMIENTAS ============ -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Herramientas para el aula</span>
+            <h2 class="reveal">Del contenido a la clase</h2>
+          </div>
+          <p class="reveal">El profesorado nos da muchas herramientas pedagógicas. Acá reunimos lo que más nos falta: <strong>qué contenidos enseñar y cómo llevarlos al aula</strong>.</p>
+        </div>
+        <div class="grid grid-3" id="features">
+          <a class="card lift card-link reveal" href="niveles.html"><div class="card-icon" data-icon="layers"></div><h3>Contenidos por nivel</h3><p class="muted">Sala por sala, grado por grado y año por año, organizados en los tres ejes del área de Tecnología.</p><span class="arrow">Explorar <span data-icon="arrow"></span></span></a>
+          <a class="card lift card-link reveal" href="secuencias.html"><div class="card-icon" data-icon="pencil"></div><h3>Secuencias didácticas</h3><p class="muted">Propuestas completas con propósitos, momentos, materiales y evaluación, listas para imprimir.</p><span class="arrow">Ver secuencias <span data-icon="arrow"></span></span></a>
+          <a class="card lift card-link reveal" href="planificador.html"><div class="card-icon" data-icon="doc"></div><h3>Planificador</h3><p class="muted">Elegí nivel, grado y contenidos, y la biblioteca arma el esqueleto de tu planificación.</p><span class="arrow">Planificar <span data-icon="arrow"></span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NIVELES ============ -->
+    <section class="section section-alt" id="niveles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Tres niveles, un recorrido</span>
+            <h2 class="reveal">¿En qué nivel vas a enseñar?</h2>
+          </div>
+          <p class="reveal">El título de Profesor/a en Educación Tecnológica te habilita para enseñar en distintos niveles. Cada uno tiene sus contenidos y su forma de trabajarlos.</p>
+        </div>
+        <div class="grid grid-3" id="home-niveles"></div>
+      </div>
+    </section>
+
+    <!-- ============ EJES ============ -->
+    <section class="section" id="ejes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">El mapa del área</span>
+            <h2 class="reveal">Los tres ejes de la Educación Tecnológica</h2>
+          </div>
+          <p class="reveal">Los NAP y el Diseño Curricular de Misiones organizan todos los contenidos en tres ejes. Entenderlos es la clave para planificar en cualquier nivel.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card eje-card eje-procesos lift reveal">
+            <span class="eje-num">EJE 1</span><div class="card-icon" data-icon="flow"></div>
+            <h3>Los procesos tecnológicos</h3>
+            <p class="muted"><strong style="color:var(--ink)">¿Cómo se hacen las cosas?</strong> Operaciones sobre materiales, energía e información; organización y control; tareas de las personas; comunicación técnica.</p>
+            <p class="mono" style="font-size:.78rem;color:var(--muted);margin:0">Ej.: del yerbal al paquete de yerba</p>
+          </article>
+          <article class="card eje-card eje-medios lift reveal">
+            <span class="eje-num">EJE 2</span><div class="card-icon" data-icon="gear"></div>
+            <h3>Los medios técnicos</h3>
+            <p class="muted"><strong style="color:var(--ink)">¿Con qué se hacen?</strong> Herramientas, máquinas, mecanismos, sensores y controladores; delegación de funciones; resolución de problemas de diseño.</p>
+            <p class="mono" style="font-size:.78rem;color:var(--muted);margin:0">Ej.: del mortero al molino automático</p>
+          </article>
+          <article class="card eje-card eje-reflexion lift reveal">
+            <span class="eje-num">EJE 3</span><div class="card-icon" data-icon="people"></div>
+            <h3>La reflexión sociocultural</h3>
+            <p class="muted"><strong style="color:var(--ink)">¿Por qué, para quién y con qué consecuencias?</strong> Cambios y continuidades, coexistencia de tecnologías, sistemas sociotécnicos, ambiente y trabajo.</p>
+            <p class="mono" style="font-size:.78rem;color:var(--muted);margin:0">Ej.: Yacyretá y la costa de Posadas</p>
+          </article>
+        </div>
+        <div class="callout info reveal" style="margin-top:22px"><span data-icon="info"></span><p>Además de los ejes, el <strong>Diseño Curricular de Misiones 2022</strong> distingue <strong>contenidos esenciales</strong> (los saberes centrales) y <strong>contenidos emergentes</strong> (temas actuales y regionales como biotecnología, impresión 3D, inteligencia artificial o casos misioneros).</p></div>
+      </div>
+    </section>
+
+    <!-- ============ PROFESORADO ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Para los 4 años de la carrera</span>
+            <h2 class="reveal">Cada materia, conectada con lo que vas a enseñar</h2>
+          </div>
+          <p class="reveal">Recorré el plan de estudios y descubrí cómo cada espacio curricular te ayuda a enseñar los contenidos del aula.</p>
+        </div>
+        <div class="grid grid-4" id="home-profesorado"></div>
+      </div>
+    </section>
+
+    <!-- ============ SECUENCIAS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Listas para el aula</span>
+            <h2 class="reveal">Secuencias didácticas destacadas</h2>
+          </div>
+          <a class="btn btn-ghost reveal" href="secuencias.html">Ver todas <span data-icon="arrow"></span></a>
+        </div>
+        <div class="grid grid-3" id="home-secuencias"></div>
+      </div>
+    </section>
+
+    <!-- ============ MISIONES ============ -->
+    <section class="section section-alt">
+      <div class="container feature-split">
+        <div id="home-misiones-img" class="reveal reveal-left"></div>
+        <div class="reveal reveal-right">
+          <span class="eyebrow">Contextualizar es enseñar mejor</span>
+          <h2>La tecnología que tenemos cerca</h2>
+          <p class="lead">El Diseño Curricular de Misiones pide trabajar con casos regionales. Por eso reunimos procesos productivos e innovaciones de la provincia, con el paso a paso, preguntas para el aula y su lugar en el currículum.</p>
+          <div class="chip-row" style="margin:18px 0 24px">
+            <a class="chip" href="misiones.html#yerba">Yerba mate</a><a class="chip" href="misiones.html#te">Té</a><a class="chip" href="misiones.html#yacyreta">Yacyretá</a><a class="chip" href="misiones.html#forestal">Forestoindustria</a><a class="chip" href="misiones.html#biotecnologia">Biotecnología</a><a class="chip" href="misiones.html#innovacion">Robótica e innovación</a>
+          </div>
+          <a class="btn btn-primary" href="misiones.html">Explorar los casos <span data-icon="arrow"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEOS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Para ver y compartir</span>
+            <h2 class="reveal">Videos seleccionados</h2>
+          </div>
+          <a class="btn btn-ghost reveal" href="recursos.html#video">Todos los videos <span data-icon="arrow"></span></a>
+        </div>
+        <div class="grid grid-3" id="home-videos"></div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="card reveal blueprint-bg" style="padding:clamp(28px,5vw,56px);border-radius:var(--radius-l);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+          <div>
+            <span class="eyebrow">Una biblioteca que crece entre todos</span>
+            <h2 style="margin-bottom:.3em">¿Tenés apuntes, PDFs, fotos o una buena clase?</h2>
+            <p class="muted" style="margin:0;max-width:60ch">Este proyecto nació en Sociología de la Educación (3° año) para todos los años del profesorado. Sumá tu material para que les sirva a quienes vienen detrás.</p>
+          </div>
+          <a class="btn btn-primary" href="proyecto.html#sumar">Sumar material <span data-icon="arrow"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

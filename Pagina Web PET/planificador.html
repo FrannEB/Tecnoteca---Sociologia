@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planificador — Biblioteca Virtual Docente</title>
+  <meta name="description" content="Armá el esqueleto de una planificación de Educación Tecnológica eligiendo nivel, grado y contenidos curriculares. Editable e imprimible.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="planificador">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero no-print">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Planificador</span></nav>
+        <h1 class="reveal">Armá tu planificación</h1>
+        <p class="lead reveal">Elegí nivel, grado y contenidos. La biblioteca arma el esqueleto con fundamentación, propósitos, objetivos, contenidos por eje, actividades, recursos y evaluación. Después <strong>hacé clic sobre el texto para editarlo</strong> e imprimilo o guardalo como PDF.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container planner">
+        <aside class="planner-side card no-print" aria-label="Datos de la planificación">
+          <form id="pl-form" onsubmit="return false">
+            <div class="field-row">
+              <div class="field"><label for="pl-nivel">Nivel</label><select id="pl-nivel"></select></div>
+              <div class="field"><label for="pl-grado">Sala / grado / año</label><select id="pl-grado"></select></div>
+            </div>
+            <div class="field"><label for="pl-titulo">Título o tema</label><input id="pl-titulo" placeholder="Ej.: Máquinas que mueven"></div>
+            <div class="field"><label for="pl-escuela">Escuela</label><input id="pl-escuela" placeholder="Ej.: Escuela N° ..."></div>
+            <div class="field-row">
+              <div class="field"><label for="pl-docente">Docente / practicante</label><input id="pl-docente"></div>
+              <div class="field"><label for="pl-curso">Curso / sección</label><input id="pl-curso"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="pl-periodo">Período</label><input id="pl-periodo" placeholder="Ej.: Agosto 2026"></div>
+              <div class="field"><label for="pl-clases">N° de clases</label><input id="pl-clases" type="number" min="1" max="40" value="4"></div>
+            </div>
+            <div class="field">
+              <label>Contenidos <span class="muted" style="font-weight:400">(marcá los que vas a trabajar)</span></label>
+              <div class="chip-row" style="margin-bottom:6px"><button class="chip" type="button" id="pl-all">Marcar todos</button><button class="chip" type="button" id="pl-none">Ninguno</button></div>
+              <div class="check-list" id="pl-contenidos"></div>
+            </div>
+            <div class="field">
+              <label>Actividades sugeridas</label>
+              <div class="check-list" id="pl-ideas" style="max-height:220px"></div>
+            </div>
+            <div class="chip-row" style="margin-top:6px">
+              <button class="btn btn-primary btn-sm" type="button" id="pl-print"><span data-icon="print"></span> Imprimir / PDF</button>
+              <button class="btn btn-ghost btn-sm" type="button" id="pl-reset">Limpiar</button>
+            </div>
+            <p class="muted" style="font-size:.78rem;margin-top:12px">Tus datos se guardan solo en este navegador.</p>
+          </form>
+        </aside>
+        <div>
+          <div class="callout no-print reveal" style="margin-bottom:16px"><span data-icon="pencil"></span><p>La hoja se actualiza cuando cambiás el formulario. Si editás el texto a mano, hacelo al final: un cambio en el formulario vuelve a generar la hoja.</p></div>
+          <article class="doc-sheet" id="pl-sheet" aria-live="polite"></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recursos y videos — Biblioteca Virtual Docente</title>
+  <meta name="description" content="Documentos oficiales (NAP, Diseño Curricular de Misiones), videos, simuladores y herramientas gratuitas para enseñar Educación Tecnológica.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="recursos">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Recursos</span></nav>
+        <h1 class="reveal">Biblioteca de recursos</h1>
+        <p class="lead reveal">Documentos curriculares oficiales, videos para el aula, simuladores y herramientas gratuitas. Todos los enlaces fueron revisados; los marcados con <span style="color:var(--gold)">★</span> son los imprescindibles.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <div class="toolbar">
+          <label class="search-input"><span data-icon="search"></span><input id="res-search" type="search" placeholder="Buscar por título, tema o fuente" aria-label="Buscar recurso"></label>
+          <label class="visually-hidden" for="res-area">Estante</label>
+          <select id="res-area" class="select"></select>
+          <label class="visually-hidden" for="res-nivel">Nivel</label>
+          <select id="res-nivel" class="select">
+            <option value="">Todos los niveles</option><option value="inicial">Inicial</option><option value="primaria">Primaria</option><option value="secundaria">Secundaria</option><option value="profesorado">Profesorado</option>
+          </select>
+          <label class="visually-hidden" for="res-eje">Eje</label>
+          <select id="res-eje" class="select">
+            <option value="">Todos los ejes</option><option value="procesos">Procesos tecnológicos</option><option value="medios">Medios técnicos</option><option value="reflexion">Reflexión sociocultural</option>
+          </select>
+        </div>
+        <div class="toolbar" style="justify-content:space-between">
+          <div class="chip-row" id="res-tipo" role="group" aria-label="Tipo de recurso"></div>
+          <span class="mono muted" id="res-count" style="font-size:.84rem"></span>
+        </div>
+        <div class="grid grid-3" id="res-grid"></div>
+        <div class="callout reveal" style="margin-top:28px"><span data-icon="info"></span><p>Los videos se reproducen dentro de la página cuando la biblioteca está publicada en Internet. Si la abrís desde tu computadora (archivo local), se abren en YouTube en una pestaña nueva.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

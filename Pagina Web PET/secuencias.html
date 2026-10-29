@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secuencias didácticas — Biblioteca Virtual Docente</title>
+  <meta name="description" content="Secuencias didácticas de Educación Tecnológica para Inicial, Primaria y Secundaria: propósitos, contenidos, materiales, momentos y evaluación, listas para imprimir.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="secuencias">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Secuencias didácticas</span></nav>
+        <h1 class="reveal">Secuencias didácticas para llevar al aula</h1>
+        <p class="lead reveal">Propuestas completas —propósitos, contenidos, materiales, momentos y evaluación— basadas en los NAP, el Diseño Curricular de Misiones y los Cuadernos para el aula. Abrí una, imprimila o usala como punto de partida en el <a href="planificador.html">Planificador</a>.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <div class="toolbar"><div class="chip-row" id="seq-filter" role="group" aria-label="Filtrar por nivel"></div></div>
+        <div class="grid grid-3" id="seq-grid"></div>
+        <div class="callout reveal" style="margin-top:28px"><span data-icon="star"></span><p><strong>¿Diste una clase que funcionó?</strong> Las secuencias se cargan en <code>assets/js/data/secuencias.js</code>. Pasanos la tuya y la sumamos con tu nombre. Ver <a href="proyecto.html#sumar">cómo sumar material</a>.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="seq-modal" hidden role="dialog" aria-modal="true" aria-label="Secuencia didáctica">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="icon-btn modal-close" type="button" data-close-modal aria-label="Cerrar"><span data-icon="close"></span></button>
+      <div class="modal-content" id="seq-content"></div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contenidos por nivel — Biblioteca Virtual Docente</title>
+  <meta name="description" content="Contenidos curriculares de Educación Tecnológica por sala, grado y año: Nivel Inicial, Primario (1° a 7°) y Secundario (Ciclo Básico de Misiones), organizados en los tres ejes.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="niveles">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Contenidos por nivel</span></nav>
+        <h1 class="reveal">Contenidos curriculares, grado por grado</h1>
+        <p class="lead reveal">Elegí el nivel y la sala, grado o año. Vas a ver los contenidos organizados en los tres ejes del área, los conceptos clave, ideas para el aula y recursos. En secundaria podés mostrar u ocultar los <strong>contenidos emergentes</strong> del Diseño Curricular de Misiones.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <div class="level-switch reveal" id="level-switch" role="tablist" aria-label="Nivel educativo"></div>
+        <div id="level-intro"></div>
+        <div class="grade-bar" id="grade-bar" role="tablist" aria-label="Sala, grado o año"></div>
+        <div id="grade-view" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

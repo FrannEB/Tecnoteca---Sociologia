@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conceptos clave — Biblioteca Virtual Docente</title>
+  <meta name="description" content="Glosario de Educación Tecnológica con definiciones, ejemplos regionales y diagramas interactivos: sistemas, flujos de materia-energía-información y control a lazo abierto y cerrado.">
+  <meta name="theme-color" content="#14306a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("pet:theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+</head>
+<body data-page="conceptos">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Conceptos</span></nav>
+        <h1 class="reveal">Conceptos clave del área</h1>
+        <p class="lead reveal">Las categorías que organizan la Educación Tecnológica, explicadas con palabras simples y ejemplos de Misiones. Abajo vas a encontrar <a href="#diagramas">diagramas interactivos</a> para entender sistemas y control.</p>
+      </div>
+    </section>
+
+    <!-- ============ DIAGRAMAS ============ -->
+    <section class="section-tight" id="diagramas" style="padding-top:0">
+      <div class="container">
+        <div class="grid" style="align-items:start">
+          <div class="diagram reveal">
+            <span class="eyebrow">Interactivo · Enfoque sistémico</span>
+            <h3>Todo sistema transforma materia, energía e información</h3>
+            <p class="muted" style="font-size:.93rem">Elegí un ejemplo y mirá qué entra y qué sale. Así se analiza cualquier artefacto o proceso como una «caja negra».</p>
+            <div class="diagram-controls chip-row" id="sys-controls"></div>
+            <div id="sys-diagram"></div>
+            <div class="chip-row" style="margin-top:8px;font-size:.8rem">
+              <span class="chip" style="cursor:default"><span class="dot" style="color:var(--c-materia)"></span>Materia</span>
+              <span class="chip" style="cursor:default"><span class="dot" style="color:var(--c-energia)"></span>Energía</span>
+              <span class="chip" style="cursor:default"><span class="dot" style="color:var(--c-info)"></span>Información</span>
+            </div>
+          </div>
+
+          <div class="diagram reveal" style="--d:.1s">
+            <span class="eyebrow">Interactivo · Control automático</span>
+            <h3>¿Por tiempo o con sensor?</h3>
+            <p class="muted" style="font-size:.93rem">Un tanque se llena con una válvula y se vacía por consumo. Compará el control <strong>a lazo abierto</strong> (programa por tiempo) con el control <strong>a lazo cerrado</strong> (un sensor mide el nivel y corrige).</p>
+            <div class="diagram-controls chip-row">
+              <button class="chip" type="button" data-mode="abierto" aria-pressed="true">Por tiempo (lazo abierto)</button>
+              <button class="chip" type="button" data-mode="cerrado" aria-pressed="false">Con sensor (lazo cerrado)</button>
+            </div>
+            <div class="loop-sim">
+              <div class="tank" aria-hidden="true"><div class="tank-water" id="tank-water"></div><div class="tank-ref" id="tank-ref"><span>REF</span></div></div>
+              <div class="sim-readout" aria-live="polite">
+                <div><span>Modo</span><strong id="sim-mode">—</strong></div>
+                <div><span>Nivel</span><strong id="sim-level">—</strong></div>
+                <div><span>Válvula</span><strong id="sim-valve">—</strong></div>
+                <div style="border:0"><em id="sim-msg" class="muted">—</em></div>
+                <label for="sim-consumo" style="font-family:var(--font-body);font-size:.84rem;font-weight:600;margin-top:8px">Consumo de agua</label>
+                <input id="sim-consumo" type="range" min="0" max="10" value="4" style="accent-color:var(--brand)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:22px">
+          <div class="card reveal">
+            <span class="eyebrow">Estrategia didáctica</span>
+            <h3>Análisis de producto</h3>
+            <div class="steps" style="margin-top:14px">
+              <div class="step"><div><h4>Morfológico</h4><p>¿Qué forma tiene? Dibujo, dimensiones, colores, texturas.</p></div></div>
+              <div class="step"><div><h4>Estructural</h4><p>¿Qué partes tiene y cómo se relacionan? Despiece.</p></div></div>
+              <div class="step"><div><h4>Funcional</h4><p>¿Para qué sirve y cómo funciona cada parte?</p></div></div>
+              <div class="step"><div><h4>Tecnológico</h4><p>¿De qué materiales está hecho y cómo se fabricó?</p></div></div>
+              <div class="step"><div><h4>Económico y relacional</h4><p>¿Cuánto cuesta? ¿Con qué otros productos y personas se relaciona?</p></div></div>
+              <div class="step"><div><h4>Histórico y comparativo</h4><p>¿Cómo era antes? ¿Qué otros productos cumplen la misma función?</p></div></div>
+            </div>
+          </div>
+          <div class="card reveal" style="--d:.1s">
+            <span class="eyebrow">Estrategia didáctica</span>
+            <h3>Resolución de problemas de diseño</h3>
+            <div class="steps" style="margin-top:14px">
+              <div class="step"><div><h4>Identificar el problema</h4><p>¿Qué necesidad hay? ¿Qué especificaciones y restricciones?</p></div></div>
+              <div class="step"><div><h4>Buscar información</h4><p>Analizar soluciones existentes, materiales y técnicas.</p></div></div>
+              <div class="step"><div><h4>Generar alternativas</h4><p>Bocetos y propuestas; elegir con criterios.</p></div></div>
+              <div class="step"><div><h4>Planificar</h4><p>Planos, lista de materiales, secuencia de operaciones, roles.</p></div></div>
+              <div class="step"><div><h4>Construir y ensayar</h4><p>Prototipo, pruebas y ajustes.</p></div></div>
+              <div class="step"><div><h4>Evaluar y comunicar</h4><p>¿Cumple la función? ¿Qué mejorarías? Presentar el trabajo.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GLOSARIO ============ -->
+    <section class="section-tight" id="glosario">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:18px">
+          <div><span class="eyebrow">Glosario</span><h2 style="margin:0">De la A a la Z</h2></div>
+          <p class="mono" id="term-count" style="font-size:.84rem"></p>
+        </div>
+        <div class="toolbar">
+          <label class="search-input"><span data-icon="search"></span><input id="term-search" type="search" placeholder="Buscar concepto, por ejemplo «sensor» o «insumo»" aria-label="Buscar concepto"></label>
+          <div class="chip-row" id="eje-filter" role="group" aria-label="Filtrar por eje"></div>
+        </div>
+        <div class="grid grid-2" id="terms"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/curriculo.js"></script>
+  <script src="assets/js/data/conceptos.js"></script>
+  <script src="assets/js/data/recursos.js"></script>
+  <script src="assets/js/data/profesorado.js"></script>
+  <script src="assets/js/data/secuencias.js"></script>
+  <script src="assets/js/data/misiones.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/proyecto.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>
